@@ -12,3 +12,24 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector('.gallery');
+
+// v1
+images.forEach(el => {
+  const textInsert = (`<li><img class="picture" src=${el.url} alt='${el.alt}' width = '250'></img></li>`);
+  list.insertAdjacentHTML('beforeend', textInsert);
+});
+
+// // v2
+// const textInsert = images
+// 	.map(img => `<li><img class="picture" src=${img.url} alt='${img.alt}' width = '250' ></img></li>`)
+// 	.join('');
+
+// list.insertAdjacentHTML('beforeend', textInsert);
+
+list.style.display ='flex';
+list.style.flexWrap ='wrap';
+list.style['list-style'] = 'none';
+list.style.justifyContent = 'center';
+list.style.gap = '10px';
