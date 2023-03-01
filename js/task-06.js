@@ -5,6 +5,9 @@ txtInput.addEventListener('blur', eventBlur => {
   txtInput.classList.remove('invalid');
 
   if (eventBlur.target.value !== "") {
-    txtInput.classList.add((txtInput.dataset.length == eventBlur.target.value.length) ? "valid" : "invalid");
+    //v1
+    txtInput.classList.add((parseInt(txtInput.dataset.length) === eventBlur.target.value.length) ? "valid" : "invalid");    
+    //v2
+    // txtInput.classList.add((+txtInput.dataset.length === eventBlur.target.value.length) ? "valid" : "invalid");  
   }
 })
