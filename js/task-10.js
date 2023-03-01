@@ -13,7 +13,9 @@ const createBoxes = (amount) => {
 	destroyBoxes();
   const arrDiv = [];
   for (let number = 0; number < amount; number++) {
+    //для ефекту додавання закомитити строку нижче
     const divEl = document.createElement("div");
+    
     divEl.style.height = divEl.style.width = 30 + 10 * number + "px";
     divEl.style.background = getRandomHexColor();
     arrDiv.push(divEl);
